@@ -3,11 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DemoReact</title>
+  <title>DemoReactKhoaPham</title>
 </head>
 <body>
   
-  HELLO
+  <div id="root"></div>
 
-</body>
+  <script type="text/babel">
+
+    const Hello = <h1> Hello, Khoa Pham </h1>;
+    const root = document.getElementById('root');
+
+    ReactDOM.render(Hello, root);
+
+  </script>
+
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </html>
