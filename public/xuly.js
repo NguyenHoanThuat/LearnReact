@@ -1,18 +1,28 @@
 class KhoaPham extends React.Component{
+  layThongTin() {
+    alert("Nguyễn Hoàn Thuật")
+  }    
   render(){
     return <div>
       <h1 className = "mau-vang"> Hello, {this.props.ten}</h1>
       <p>{this.props.children}</p>
+
+      <button onClick={this.layThongTin}>Thông tin khóa học</button>
     </div>
       
   };
 };
 
 class NewH2 extends React.Component {
+  layThongTin() {
+    alert("Nguyễn Hoàn Bão")
+  }    
   render() {
   return <div>
     <h2> Hello, {this.props.ten}</h2>
     <p>{this.props.children}</p>
+
+    <button onClick={this.layThongTin}>Thông tin khóa học</button>
   </div>
   };
 };
