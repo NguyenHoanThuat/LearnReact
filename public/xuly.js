@@ -17,7 +17,7 @@ class NewImg extends React.Component {
 }
 
 
-
+  
 const Div = <div>
     <KhoaPham />
     <NewH2 />
