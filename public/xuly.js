@@ -1,12 +1,12 @@
 class KhoaPham extends React.Component{
   render(){
-    return <h1 className = "mau-vang"> Khoa Pham React </h1>
+    return <h1 className = "mau-vang"> Hello, {this.props.ten}</h1>
   };
 };
 
 class NewH2 extends React.Component {
   render() {
-    return <h2> Hello, Coder-x</h2>
+  return <h2> Hello, {this.props.ten}</h2>
   };
 };
 
@@ -19,8 +19,8 @@ class NewImg extends React.Component {
 
 
 const Div = <div>
-    <KhoaPham />
-    <NewH2 />
+    <KhoaPham ten="Nguyen Hoan Thuat"/>
+    <NewH2 ten="Nguyen Hoan Bao"/>
     <NewImg />
   </div>
 
