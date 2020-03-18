@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DemoReactKhoaPham</title>
 </head>
-<style>
-  .mau-vang {
-    color: yellow;
-  }
-</style>
 <body>
   
   <div id="root"></div>
 
-  <script src="xuly.js" type="text/babel"></script>
+  <script type="text/babel">
+
+    const Hello = <h1> Hello, Khoa Pham </h1>;
+
+    const root = document.getElementById('root');
+
+    ReactDOM.render(Hello, root);
+
+  </script>
 
 
 <script crossorigin src="lib/react.development.js"></script>
