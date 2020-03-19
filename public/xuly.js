@@ -2,7 +2,7 @@ function getName(name) {
   alert(name);
 }
 
-class KhoaPham extends React.Component{   
+class KhoaPham extends React.Component{
   render(){
     return <div>
       <h1 className = "mau-vang"> Hello, {this.props.ten}</h1>
