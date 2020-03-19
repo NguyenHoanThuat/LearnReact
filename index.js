@@ -10,5 +10,5 @@ app.set('views', './views');
 app.listen(3000);
 
 app.get("/", (req,res) => {
-  res.render("trangchu");
+  res.render("newFile");
 })
