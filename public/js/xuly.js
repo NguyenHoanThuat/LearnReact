@@ -6,8 +6,6 @@ class NewFile extends React.Component {
             }
     }
 
-    
-
     render() {
         return(
             <div>
