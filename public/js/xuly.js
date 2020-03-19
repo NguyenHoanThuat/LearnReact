@@ -26,17 +26,29 @@ class NewImage extends React.Component {
             }
     }
 
+    next = () => {
+        if(this.state.hinh === 5){
+            this.setState(5)
+        }
+        this.state.hinh  = parseInt(this.state.hinh) + 1;
+        this.setState(this.state);
+    }
+
+    prev = () => {
+        if(this.state.hinh === 1){
+            this.setState(1)
+        }
+        this.state.hinh = parseInt(this.state.hinh) - 1;
+        this.setState(this.state)
+    }
+
     render() {
         return(
             <div class="imgLove">
                 <img src={"/image/hinh-" + this.state.hinh + ".jpg"}/>
                 <hr />
-                <button onClick={ () => {
-                    this.state.hinh = parseInt(this.state.hinh) - 1;
-                    this.setState(this.state)}}>Quay Lại</button>
-                <button onClick={ () => {
-                    this.state.hinh = parseInt(this.state.hinh) + 1;
-                    this.setState(this.state)}}>Tiếp theo</button>
+                <button onClick={this.prev}>Quay Lại</button>
+                <button onClick={this.next}>Tiếp theo</button>
             </div>
         )
     }
