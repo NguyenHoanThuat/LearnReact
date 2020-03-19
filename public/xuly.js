@@ -2,7 +2,7 @@ function getName(name) {
   alert(name);
 }
 
-class KhoaPham extends React.Component{
+class KhoaPham extends React.Component {
   constructor(props) {
     super(props)
       this.state = {tongHocVien: this.props.tongHocVien}
@@ -48,12 +48,29 @@ class NewImg extends React.Component {
   render() {
     return <img src="/image/anh-dep-3.jpg"/>
   }
-}
+};
 
+class NewInput extends React.Component {
+  constructor(props) {
+    super(props)
+      this.myRef = React.createRef();
+  }
 
+  show = () => {
+    const text = this.myRef.current.value;
+    alert(text);
+  }
 
-  
+  render() {
+    return <div>
+      <input type="text" ref={this.myRef}/>
+      <button onClick={this.show}>hiển thị</button>
+    </div>
+  }
+};
+
 const Div = <div>
+    <NewInput />
     <KhoaPham ten="Nguyễn Hoàn Thuật" tongHocVien="10">Khoa hoc React</KhoaPham>
     <NewH2 ten="Nguyễn Hoàn Bão" tongHocVien="20">Khoa hoc NodeJs</NewH2>
     <NewImg />
