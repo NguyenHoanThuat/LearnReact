@@ -20,8 +20,33 @@ class NewFile extends React.Component {
     }
 }
 
+class NewImage extends React.Component {
+    constructor(props) {
+        super(props)
+            this.state = {
+                hinh: 1
+            }
+    }
+
+    render() {
+        return(
+            <div class="imgLove">
+                <img src={"/image/hinh-" + this.state.hinh + ".jpg"}/>
+                <hr />
+                <button onClick={ () => {
+                    this.state.hinh = parseInt(this.state.hinh) - 1;
+                    this.setState(this.state)}}>Quay Lại</button>
+                <button onClick={ () => {
+                    this.state.hinh = parseInt(this.state.hinh) + 1;
+                    this.setState(this.state)}}>Tiếp theo</button>
+            </div>
+        )
+    }
+}
+
 const Div = <div>
     <NewFile />
+    <NewImage />
 </div>
 
 const root = document.getElementById('root');
