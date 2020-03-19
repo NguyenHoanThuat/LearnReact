@@ -1,28 +1,26 @@
-class KhoaPham extends React.Component{
-  layThongTin() {
-    alert("Nguyễn Hoàn Thuật")
-  }    
+function getName(name) {
+  alert(name);
+}
+
+class KhoaPham extends React.Component{   
   render(){
     return <div>
       <h1 className = "mau-vang"> Hello, {this.props.ten}</h1>
       <p>{this.props.children}</p>
 
-      <button onClick={this.layThongTin}>Thông tin khóa học</button>
+      <button onClick={() => {getName('Hello ' + this.props.ten)}}>Thông tin khóa học</button>
     </div>
       
   };
 };
 
-class NewH2 extends React.Component {
-  layThongTin() {
-    alert("Nguyễn Hoàn Bão")
-  }    
+class NewH2 extends React.Component {   
   render() {
   return <div>
     <h2> Hello, {this.props.ten}</h2>
     <p>{this.props.children}</p>
 
-    <button onClick={this.layThongTin}>Thông tin khóa học</button>
+    <button onClick={() => {getName('Hello ' + this.props.ten)}}>Thông tin khóa học</button>
   </div>
   };
 };
@@ -37,8 +35,8 @@ class NewImg extends React.Component {
 
   
 const Div = <div>
-    <KhoaPham ten="Nguyen Hoan Thuat">Khoa hoc React</KhoaPham>
-    <NewH2 ten="Nguyen Hoan Bao">Khoa hoc NodeJs</NewH2>
+    <KhoaPham ten="Nguyễn Hoàn Thuật">Khoa hoc React</KhoaPham>
+    <NewH2 ten="Nguyễn Hoàn Bão">Khoa hoc NodeJs</NewH2>
     <NewImg />
   </div>
 
