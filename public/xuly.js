@@ -2,13 +2,20 @@ function getName(name) {
   alert(name);
 }
 
-class KhoaPham extends React.Component{   
+class KhoaPham extends React.Component{
+  constructor(props) {
+    super(props)
+      this.state = {tongHocVien: 10}
+  } 
   render(){
     return <div>
       <h1 className = "mau-vang"> Hello, {this.props.ten}</h1>
       <p>{this.props.children}</p>
 
+      <h2>So hoc vien: {this.state.tongHocVien}</h2>
+
       <button onClick={() => {getName('Hello ' + this.props.ten)}}>Thông tin khóa học</button>
+      <button onClick={() => this.setState({ tongHocVien: this.state.tongHocVien + 1 })}>Thêm học viên</button>
     </div>
       
   };
