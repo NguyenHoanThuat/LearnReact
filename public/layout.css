@@ -4,9 +4,35 @@ div {
 button {
     padding: 20px 20px;
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 img {
     margin-top: 20px;
     width: 400px;
     height: 400px;
+}
+.div-note {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #575353;
+    border-radius: .375rem;                
+    margin: auto;      
+    text-align: center;
+    margin-bottom: 10px;                                                   
+}
+.div-list {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #575353;
+    border-radius: .375rem;
+    margin: auto;
+    
+}
+.div-btn {
+    padding-top: 20px;
+}
+.btn-new {
+    font-size: 1rem;
+    margin-left: 20px;
+    padding: 5px;
 }
