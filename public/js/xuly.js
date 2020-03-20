@@ -44,7 +44,7 @@ class NewImage extends React.Component {
 
     render() {
         return(
-            <div class="imgLove">
+            <div className="imgLove">
                 <img src={"/image/hinh-" + this.state.hinh + ".jpg"}/>
                 <hr />
                 <button onClick={this.prev}>Quay Lại</button>
@@ -54,9 +54,42 @@ class NewImage extends React.Component {
     }
 }
 
+
+class NewForward extends React.Component {
+    constructor(props) {
+        super(props)
+            this.changImage =  this.changImage.bind(this);
+    }
+
+    state = {
+        hinh: 1,
+    }
+    
+    changImage() {
+        let num_hinh = parseInt(this.state.hinh) + 1;
+        if(num_hinh == 6) {
+            num_hinh =1;
+        }
+        this.setState({hinh: num_hinh});
+    }
+
+    render() {
+        return(
+            <div>
+                <img src={"/image/hinh-" + this.state.hinh + ".jpg"} />
+            </div>
+        )
+    }
+
+    componentDidMount() {
+        setInterval(this.changImage, 2000);
+    }
+}
+
 const Div = <div>
     <NewFile />
     <NewImage />
+    <NewForward />
 </div>
 
 const root = document.getElementById('root');
