@@ -3,6 +3,7 @@ class NewP extends React.Component {
     render() {
         return(
             <div>
+                <img src={this.props.src}/>
                 <p> {this.props.children}</p>
             </div>
         )
@@ -17,12 +18,16 @@ class NewH1 extends React.Component {
     }
 
     add() {
-        this.state.mang.push('NodeJs');
+        this.state.mang.push({srcHinh: "image/hinh-1.jpg", noiDung: "Hello Coder"});
         this.setState(this.state);
     }
 
     state = {
-        mang: ['Hello', 'Hi', 'Ahihi']
+        mang: [
+            {srcHinh: "image/hinh-1.jpg", noiDung: "Hello Coder"},
+            {srcHinh: "image/hinh-2.jpg", noiDung: "Hello Coder-X"},
+            {srcHinh: "image/hinh-3.jpg", noiDung: "Hello Coder-Tokyo"}
+        ]
     }
 
     render() {
@@ -32,7 +37,7 @@ class NewH1 extends React.Component {
 
                 {
                     this.state.mang.map((note, index) => {
-                        return <NewP key={index}> {note}</NewP>
+                        return <NewP key={index} src={note.srcHinh}> {note.noiDung}</NewP>
                     })
                 }
             </div>
